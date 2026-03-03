@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Community Manager · Prof.Marcos Fernández</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e6e9ef;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e1e2f;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .manual {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px -10px rgba(0,20,30,0.2);
+            padding: 2.8rem 2.5rem;
+            border: 1px solid #d8dee9;
+        }
+
+        /* Navegación entre partes */
+        .nav-partes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f4fa;
+            border-radius: 60px;
+            padding: 0.8rem 1.5rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #cbd6e4;
+        }
+
+        .nav-partes a {
+            text-decoration: none;
+            color: #1f3a4b;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: all 0.2s;
+        }
+
+        .nav-partes a:hover {
+            background: #2b4f6e;
+            color: white;
+        }
+
+        .nav-partes .activo {
+            background: #2b4f6e;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0a2942;
+            margin-bottom: 0.25rem;
+            border-left: 6px solid #2b4f6e;
+            padding-left: 1.2rem;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            padding-left: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1f3a4b;
+            margin: 2.5rem 0 1.2rem 0;
+            border-bottom: 2px solid #bdc9d6;
+            padding-bottom: 0.4rem;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f3a4b;
+            margin: 1.8rem 0 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f3a4b;
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2e3b4e;
+        }
+
+        ul, ol {
+            margin-bottom: 1.2rem;
+            padding-left: 1.8rem;
+            color: #2e3b4e;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        .destacado {
+            background: #f5f7fa;
+            border: 1px solid #d4dcec;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 800px) {
+            .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        }
+
+        .caja-ejemplo {
+            background: #f2f6fc;
+            border-left: 6px solid #326a8e;
+            padding: 1.2rem 1.8rem;
+            border-radius: 0 20px 20px 0;
+            margin: 1.5rem 0;
+        }
+
+        .badge {
+            background: #e1e9f2;
+            color: #1f3a4b;
+            padding: 0.25rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-break {
+            margin: 3rem 0 1rem;
+            border-top: 3px dotted #9fb8d4;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-break span {
+            background: #ffffff;
+            padding: 0 1.5rem;
+            font-weight: 600;
+            color: #2b4f6e;
+            position: relative;
+            top: -1.2rem;
+        }
+
+        .footer-parte {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5f6c80;
+            border-top: 1px solid #ccd7e6;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dashed #cbd6e4;
+            margin: 2rem 0;
+        }
+
+        .numerito {
+            background: #2b4f6e;
+            color: white;
+            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        td, th {
+            border: 1px solid #cbd6e4;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background: #e1e9f2;
+            font-weight: 600;
+        }
+
+        .estrategia-item {
+            background: #f5f7fa;
+            border-radius: 16px;
+            padding: 1.2rem;
+            border-left: 4px solid #2b4f6e;
+        }
+
+        .timeline-simple {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            background: #f0f4fa;
+            padding: 1.5rem;
+            border-radius: 28px;
+            margin: 1.8rem 0;
+            border: 1px solid #cbd6e4;
+        }
+
+        .timeline-item {
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .timeline-item .ano {
+            font-weight: 700;
+            color: #1f3a4b;
+            background: white;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #b1c3d8;
+        }
+
+        .persona-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #edf2f9;
+            border-radius: 24px;
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+            border: 1px solid #bfd1e6;
+        }
+
+        .avatar-simple {
+            width: 90px;
+            height: 90px;
+            background: #b4c8e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #1f3a4b;
+            border: 3px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .actividad-block {
+            background: #eaf0fa;
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid #9fb8d4;
+            margin: 2rem 0;
+        }
+
+        .actividad-block h3 {
+            margin-top: 0;
+            color: #0d3852;
+        }
+
+        .foda-cuadrante {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .foda-item {
+            padding: 1.2rem;
+            border-radius: 16px;
+            font-weight: 500;
+        }
+
+        .fortalezas { background: #d4edda; border-left: 6px solid #28a745; }
+        .oportunidades { background: #d1ecf1; border-left: 6px solid #17a2b8; }
+        .debilidades { background: #fff3cd; border-left: 6px solid #ffc107; }
+        .amenazas { background: #f8d7da; border-left: 6px solid #dc3545; }
+
+        /* Anclas para navegación */
+        .parte {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="manual">
+
+    <!-- TÍTULO GENERAL Y NAVEGACIÓN -->
+    <h1>Manual de Community Manager</h1>
+    <div class="subtitulo">Completo · 4 partes · Material de estudio</div>
+
+    <div class="nav-partes">
+        <a href="#parte1" class="activo">Parte 1</a>
+        <a href="#parte2">Parte 2</a>
+        <a href="#parte3">Parte 3</a>
+        <a href="#parte4">Parte 4</a>
+    </div>
+
+    <!-- ========== PARTE 1 ========== -->
+    <div id="parte1" class="parte">
+        <!-- 1.1 INTRODUCCIÓN AL MARKETING DIGITAL -->
+        <h2>1.1 Introducción al Marketing Digital</h2>
+
+        <h3>· Historia y evolución del marketing y los consumidores</h3>
+        <p>En la década de los 60, el marketing comenzó a transformarse significativamente, adaptándose a la evolución tecnológica y los cambios en el comportamiento del consumidor. Este fenómeno nos transportó a la era actual, conocida como <strong>web 4.0</strong>, donde la inteligencia artificial juega un papel fundamental.</p>
+
+        <p><strong>Román Cendoya</strong>, en su libro <em>'rEvolución: del Homo sapiens al Homo digitalis'</em>, describe cómo los humanos actuales, denominados <strong>"Homo digitalis"</strong>, son profundamente influenciados por dispositivos como teléfonos inteligentes, tablets y ordenadores. La tecnología nos ofrece respuestas instantáneas y ha transformado la forma en que nos comunicamos y trabajamos.</p>
+
+        <div class="caja-ejemplo">
+            <i class="fas fa-mobile-alt" style="margin-right: 10px; color:#326a8e;"></i> 
+            <strong>Ejemplo:</strong> Siri en los celulares de Apple, que permite realizar tareas con comandos de voz, es un claro ejemplo de cómo la inteligencia artificial simplifica nuestras vidas.
+        </div>
+
+        <h3>· De consumidor a prosumidor</h3>
+        <p>La emergencia de Internet y, en particular, la <strong>Web 2.0</strong>, ha eliminado las barreras espaciales y temporales en las interacciones sociales. Hoy en día, la mayoría de los sitios web más visitados son redes sociales. Vivimos en un entorno digital donde las pantallas son esenciales, y la conectividad constante se ha convertido en una necesidad.</p>
+
+        <p>En este contexto, el término <strong>"prosumidor"</strong> surge de la combinación de las palabras productor y consumidor. Los usuarios de internet no solo consumen contenido, sino que también lo producen, a través de comentarios, opiniones y feedback. Este cambio ha modificado significativamente el mercado y la audiencia del siglo XXI, que ahora está más informada, es más exigente y más participativa.</p>
+
+        <div class="timeline-simple">
+            <div class="timeline-item"><span class="ano">1960</span><br>Marketing<br>tradicional</div>
+            <div class="timeline-item"><span class="ano">Web 1.0</span><br>Estática</div>
+            <div class="timeline-item"><span class="ano">Web 2.0</span><br>Redes sociales<br>+ prosumidor</div>
+            <div class="timeline-item"><span class="ano">Web 4.0</span><br>IA · Homo<br>digitalis</div>
+        </div>
+
+        <h3>· Marketing de contenidos</h3>
+        <p>Es una estrategia que se basa en la <strong>creación y distribución de contenido relevante</strong> para atraer y fidelizar a los usuarios. El consumidor moderno está más informado y tiene poder de decisión, lo que obliga a las empresas a conocer bien a sus clientes y a segmentar adecuadamente sus audiencias.</p>
+
+        <h3>· Marketing online vs. marketing offline</h3>
+        <p>La discusión entre marketing online y offline se centra en las diferencias y similitudes entre ambos enfoques.</p>
+
+        <div class="grid-2">
+            <div class="destacado">
+                <i class="fas fa-tv" style="color:#1f3a4b; font-size:1.5rem;"></i>
+                <h4 style="margin-top:0.5rem;">Marketing Offline</h4>
+                <p>Se basa en los cuatro pilares del marketing mix: <strong>producto, precio, plaza y promoción</strong>. Estas estrategias buscan alcanzar a los consumidores a través de medios tradicionales como la televisión, la radio y la publicidad en exteriores. En la era offline, había menos marcas y menos competencia.</p>
+            </div>
+            <div class="destacado">
+                <i class="fas fa-globe" style="color:#1f3a4b; font-size:1.5rem;"></i>
+                <h4 style="margin-top:0.5rem;">Marketing Online</h4>
+                <p>Utiliza Internet y las tecnologías digitales para llegar a su comunidad. Ofrece gran capacidad de segmentación y permite posicionarse frente a una audiencia más amplia. Las estrategias incluyen <strong>SEO, SEM, redes sociales y blogs corporativos</strong>. La era online presenta una multitud de marcas, lo que complica la decisión de compra.</p>
+            </div>
+        </div>
+
+        <!-- 1.2 ESTRATEGIAS DE MARKETING -->
+        <h2>1.2 Estrategias de Marketing</h2>
+        <p>Buscamos posicionar nuestro negocio para aparecer a los consumidores cuando nos buscan, o incluso cuando no lo hacen. Para eso, tenemos dos principales estrategias.</p>
+
+        <h3>· Outbound marketing</h3>
+        <p>El outbound marketing utiliza acciones que tienen como objetivo captar la atención de los consumidores mediante métodos más <strong>directos y unidireccionales</strong>. Estas técnicas buscan interrumpir la actividad del consumidor para llamar su atención y lograr la venta.</p>
+
+        <p><strong>Ejemplos de outbound marketing:</strong></p>
+        <ul>
+            <li>Anuncios en prensa, radio y televisión.</li>
+            <li>Carteles publicitarios en la vía pública.</li>
+            <li>Merchandising (llaveros, tazas, lapiceras).</li>
+            <li>Stands de venta directa.</li>
+            <li>Publicidad online directa (banners, anuncios de pago en Google Adwords, videos publicitarios en YouTube).</li>
+        </ul>
+
+        <h3>· Inbound marketing</h3>
+        <p>Por otro lado, el inbound marketing es una metodología que utiliza técnicas de marketing y publicidad consideradas <strong>"no intrusivas"</strong>. Su objetivo es contactar con usuarios desde el inicio del proceso de compra y acompañarlos hasta la etapa final mediante <strong>contenido de valor</strong> que destaque su diferencial como marca.</p>
+
+        <p>El factor principal del inbound marketing es el contenido que aporta beneficios al público objetivo. Este contenido actúa como un <strong>imán</strong>: atrae el interés del usuario de manera voluntaria. La atención del consumidor no es forzada. El inbound marketing busca solucionar problemas y satisfacer necesidades de los consumidores que están buscando alternativas.</p>
+
+        <p><strong>Ejemplos de inbound marketing:</strong></p>
+        <ul>
+            <li>Contenido publicado en blogs.</li>
+            <li>Newsletters a través de email.</li>
+            <li>Tips informativos.</li>
+            <li>Webinars y ebooks gratuitos.</li>
+        </ul>
+
+        <div class="caja-ejemplo">
+            <i class="fas fa-utensils"></i> <strong>Ejemplo práctico de inbound marketing:</strong><br>
+            Cuando querés hacer algo y no sabés cómo, lo primero que pensás es buscarlo en internet. Cuando te aparece un resultado, como Paulina Cocina que te enseña a preparar esa comida, es una técnica inbound. Paulina tiene material gratis para ayudarte a solucionar ese problema sin pedir nada a cambio. Sin embargo, ahora ella sabe que sos un posible cliente de sus cursos y puede aprovechar esa información para ofrecerte más recetas o cursos pagos (premium). La esencia es inbound porque vos como usuario fuiste en búsqueda de la marca.
+        </div>
+
+        <!-- 1.3 TÉCNICAS DE MARKETING DIGITAL -->
+        <h2>1.3 Técnicas de Marketing Digital</h2>
+
+        <h3>· SEO (Search Engine Optimization)</h3>
+        <p>El SEO, o <strong>posicionamiento orgánico en buscadores</strong>, es la práctica de utilizar distintas técnicas para mejorar la posición de un website en los resultados de los buscadores sin acciones de pauta publicitaria. Esto incluye la edición de contenidos, la reescritura del código HTML, y la creación de campañas de enlaces.</p>
+
+        <h3>· SEM (Search Engine Marketing)</h3>
+        <p>El SEM, o <strong>marketing en buscadores</strong>, tiene el objetivo de posicionar un sitio web en los distintos buscadores utilizando la <strong>pauta publicitaria</strong> como herramienta principal. Cuando se realiza una búsqueda, se pueden encontrar resultados orgánicos (SEO) y resultados pagos (SEM).</p>
+
+        <div class="caja-ejemplo">
+            <i class="fas fa-search"></i> <strong>Ejemplo:</strong> Durante una búsqueda en Google, los primeros resultados suelen incluir anuncios pagados, seguidos de los resultados orgánicos.
+        </div>
+
+        <h3>· Casos de éxito en marketing digital</h3>
+        <ul>
+            <li><strong>Mercado Libre:</strong> Rediseñó su logo durante la pandemia, reemplazando el apretón de manos por el saludo de codos, aceptado en toda Latinoamérica.</li>
+            <li><strong>BBVA:</strong> Utilizó video marketing en YouTube para aumentar la colocación de tarjetas de crédito, logrando un costo por acción inferior a la media.</li>
+            <li><strong>Heineken:</strong> Su campaña "Back to the Bars" promovió el regreso seguro a los bares en el contexto de la pandemia.</li>
+            <li><strong>Campari Group:</strong> Creó un perfil de Instagram que dirigía tráfico a su sitio web, aumentando seguidores e interacciones.</li>
+            <li><strong>Milka:</strong> Con su campaña #gemeinsamKEKSEgenießen, Milka fomentó la interacción de usuarios en redes sociales y televisión, recorriendo Alemania con una caravana promocional.</li>
+        </ul>
+
+        <div class="page-break"><span>Fin Parte 1 · 4 páginas</span></div>
+
+        <!-- 1.4 CONOCIENDO AL CLIENTE IDEAL -->
+        <h2>1.4 Conociendo al Cliente Ideal</h2>
+
+        <h3>· La importancia de conocer a nuestros clientes</h3>
+        <p>Comencemos por preguntarnos: <strong>¿a quién queremos ayudar con nuestro producto/servicio?</strong></p>
+
+        <p>Conocer a nuestros clientes nos da la oportunidad de entenderlos mejor, facilitará la creación y planificación de contenido afín, nos ayudará a comunicarnos mejor, a conocer qué canales utilizan y qué productos o servicios les gustan, necesitan o prefieren. En resumen, nos permitirá tomar acciones estratégicas y decisiones monetarias con sentido.</p>
+
+        <h4>Preguntas clave para reflexionar:</h4>
+        <ul>
+            <li>¿Por qué es necesario conocer a mi cliente ideal?</li>
+            <li>¿Cuál es la diferencia entre conocerlo y trabajar sin esta información?</li>
+            <li>¿"Todo el mundo" puede ser mi cliente ideal?</li>
+        </ul>
+
+        <h3>· Buyer persona vs. Target</h3>
+        <p>Para entender mejor estas preguntas, es importante conocer tu buyer persona y quién debería comprar tu servicio/producto. Esto es un elemento básico de cualquier estrategia de marketing.</p>
+
+        <div class="grid-2">
+            <div class="destacado">
+                <h4><i class="fas fa-users"></i> Target (público objetivo)</h4>
+                <p>Es un concepto más <strong>genérico</strong>, ya que agrupa una cantidad de personas sin identidad propia, pero que cuentan con características similares como edad, género, ubicación geográfica, entre otros. Cualquier contenido o acción de marketing será casi imposible de personalizar.</p>
+                <p><em>Ejemplo: "Emprendedores que buscan crecimiento digital en sus proyectos y necesitan marketing digital para lograrlo".</em></p>
+            </div>
+            <div class="destacado">
+                <h4><i class="fas fa-user-tie"></i> Buyer persona</h4>
+                <p>Los buyer personas ayudan a los negocios a decidir: hacia dónde orientar el desarrollo de productos, qué tipo de contenido crear, cómo comunicarse con los clientes potenciales, cómo captar y retener clientes. <strong>Tienen nombre, apellido y rostro.</strong></p>
+                <p><em>Ejemplo: "María de 28 años, emprendedora, que tiene un proyecto, ama las redes sociales, le gusta hacer videos contando sus experiencias, y necesita aumentar las ventas de su marca".</em></p>
+            </div>
+        </div>
+
+        <div class="persona-card">
+            <div class="avatar-simple">👩🏻</div>
+            <div>
+                <h4 style="margin-bottom: 0.3rem;">María · Buyer persona</h4>
+                <p style="margin:0;"><strong>Datos:</strong> 28 años, emprendedora, Buenos Aires<br>
+                <strong>Hábitos:</strong> redes sociales, videos, experiencias<br>
+                <strong>Necesidad:</strong> aumentar ventas de su marca</p>
+            </div>
+        </div>
+
+        <h3>· Beneficios de conocer a tu cliente ideal</h3>
+        <p>Hablar en su lenguaje, apelar a sus emociones y tener presencia en los canales que usan permitirá lograr una <strong>conexión real</strong>. No obstante, no debemos olvidar que este cliente ideal/arquetipo es <strong>dinámico, cambiante</strong> y, con el tiempo puede transformarse; esto implica que también nosotros debemos optimizar y actualizar este perfil constantemente.</p>
+
+        <h3>· Definiendo el arquetipo de cliente</h3>
+        <p>Para poder delimitar nuestro arquetipo de cliente necesitamos utilizar herramientas de análisis. Tomamos como referencia <strong>cuatro factores principales</strong>:</p>
+        <ul>
+            <li><strong>Datos demográficos:</strong> edad, género, ubicación, nivel educativo, ingresos, profesión, modalidad laboral.</li>
+            <li><strong>Preferencias y hábitos:</strong> pasatiempos, pasiones, contenido digital que consume, temas sociales que le interesan, qué busca en una marca.</li>
+            <li><strong>Hábitos sociales:</strong> qué redes y sitios usa, con qué frecuencia, cómo participa, qué influencers sigue.</li>
+            <li><strong>Factores psicológicos:</strong> deseos, ambiciones, miedos, valores, qué busca que un producto/servicio le haga sentir, qué experiencias evita.</li>
+        </ul>
+
+        <div class="destacado">
+            <p><i class="fas fa-lightbulb" style="color:#1f3a4b;"></i> <strong>Resumen:</strong> Es complejo llevar adelante una estrategia de comunicación eficiente si no conocemos a quién le estamos hablando. Necesitamos esa información bien definida para comunicarnos de forma eficiente, directa y clara, generando una conexión real. El secreto está en <strong>humanizar la marca</strong> y generar conversaciones únicas para tu comunidad.</p>
+        </div>
+
+        <!-- 1.5 ACTIVIDAD PRÁCTICA: Coder Airlines (renombrado como Aerolínea Ejemplo) -->
+        <h2>1.5 Actividad práctica: Bocetando un arquetipo de cliente</h2>
+
+        <div class="actividad-block">
+            <h3 style="display:flex; gap:10px;"><i class="fas fa-plane" style="color:#0d3852;"></i> Aerolínea Ejemplo</h3>
+            
+            <p><strong>Contexto:</strong> Una nueva aerolínea de bandera se está posicionando fuertemente en el mercado. Necesita ayuda urgente de un especialista en CM. En primera instancia, necesita contar con un <strong>arquetipo de cliente</strong> para la empresa. Te invitamos a dejar volar tu imaginación y a jugar un poco.</p>
+            
+            <p><strong>Consigna:</strong> Imagina y desarrolla el arquetipo de cliente para una aerolínea y asígnale una imagen.</p>
+            
+            <h4>Preguntas para definir el arquetipo:</h4>
+            
+            <div style="background:#ffffff; border-radius:20px; padding:1.5rem; margin:1.2rem 0;">
+                <p><i class="fas fa-venus-mars"></i> <strong>Datos demográficos:</strong> ¿género? ¿Edad? ¿Localización? ¿Nivel educativo? ¿Nivel de ingresos? ¿Profesión? ¿Modalidad laboral?</p>
+                
+                <p><i class="fas fa-heart"></i> <strong>Preferencias y hábitos:</strong> ¿pasatiempos? ¿Pasiones? ¿Contenido digital que consume? ¿Qué temas sociales le interesan? ¿Qué busca en una marca?</p>
+                
+                <p><i class="fas fa-hashtag"></i> <strong>Hábitos sociales:</strong> ¿qué redes y sitios usa? ¿Con qué frecuencia? ¿Cómo participa? ¿Qué influencers sigue?</p>
+                
+                <p><i class="fas fa-brain"></i> <strong>Factores psicológicos:</strong> ¿cuáles son sus deseos? ¿Ambiciones? ¿Miedos? ¿Valores? ¿Qué busca que un producto o servicio le haga sentir? ¿Qué tipo de experiencias evita?</p>
+            </div>
+
+            <h4>Ejemplo de cómo presentarlo:</h4>
+            <div style="background:#ffffff; border-radius:16px; padding:1.5rem; border:1px dashed #2b4f6e;">
+                <p><strong>Nombre:</strong> [elegir uno]</p>
+                <p><strong>Edad:</strong> ...</p>
+                <p><strong>Profesión:</strong> ...</p>
+                <p><strong>Foto/imagen:</strong> (describí o dibujá)</p>
+                <p><strong>Intereses:</strong> ...</p>
+                <p><strong>Miedos al viajar:</strong> ...</p>
+                <p><strong>Redes que usa:</strong> ...</p>
+            </div>
+            
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:1.5rem;">
+                <span class="badge">🧳 viajero frecuente</span>
+                <span class="badge">🌎 aventurero</span>
+                <span class="badge">💼 business class</span>
+                <span class="badge">📸 amante de fotos</span>
+                <span class="badge">👪 viaja en familia</span>
+                <span class="badge">🎒 mochilero</span>
+            </div>
+        </div>
+
+        <div class="footer-parte">
+            Fin de la Parte 1 · Fundamentos del Marketing Digital
+        </div>
+    </div>
+
+    <!-- ========== PARTE 2 ========== -->
+    <div id="parte2" class="parte">
+        <div class="page-break"><span>Comienza Parte 2</span></div>
+
+        <!-- 2.1 INTRODUCCIÓN AL BRIEFING Y ANÁLISIS DE SITUACIÓN -->
+        <h2>2.1 Introducción al Briefing y Análisis de situación</h2>
+
+        <h3>· ¿Qué es un brief y cómo se elabora?</h3>
+        <p>El brief es un documento fundamental en la creación de campañas exitosas. Sirve como hoja de ruta para planificar y ejecutar proyectos de comunicación y publicidad. Un buen brief es esencial para alcanzar los objetivos de tu marca de manera efectiva.</p>
+
+        <h3>· Análisis de situación y definición de objetivos</h3>
+        <p>El primer paso en el briefing es analizar la situación actual y definir los objetivos que la empresa o marca quiere alcanzar. Esto ayuda a trazar las estrategias adecuadas. La definición clara de objetivos es crucial, ya que sin una clara determinación de lo que se quiere lograr, no habrá una estrategia eficiente.</p>
+
+        <h3>· Descripción de la empresa</h3>
+        <p>Es importante escribir una breve descripción de la empresa para que la agencia pueda conocer las características principales. Toda la información clara y detallada será utilizada a favor de la campaña. Datos clave:</p>
+        <ul>
+            <li><strong>Rubro de la empresa:</strong> describir el sector y sus características.</li>
+            <li><strong>Competencia:</strong> identificar competencia directa (mismo producto) e indirecta (productos diferentes que satisfacen la misma necesidad).</li>
+            <li><strong>Misión, visión y razón de ser:</strong> principios fundamentales y metas a largo plazo.</li>
+        </ul>
+
+        <h3>· Información sobre el cliente</h3>
+        <p>Proporcionar detalles sobre el cliente objetivo es esencial para orientar la campaña de manera efectiva:</p>
+        <ul>
+            <li>Edad, sexo y lugar de residencia (variables demográficas).</li>
+            <li>Costumbres y comportamiento (hábitos y preferencias).</li>
+            <li>Foco de mercado: B2B, B2C o ambos.</li>
+        </ul>
+
+        <h3>· Modelos de negocio: B2B y B2C</h3>
+        <div class="grid-2">
+            <div class="destacado">
+                <i class="fas fa-building" style="color:#1f3a4b;"></i>
+                <h4 style="margin-top:0.5rem;">B2B (Business to Business)</h4>
+                <p>Empresa provee productos/servicios a otras empresas. Ej: proveedor de materias primas, software empresarial, consultoría.</p>
+            </div>
+            <div class="destacado">
+                <i class="fas fa-user" style="color:#1f3a4b;"></i>
+                <h4 style="margin-top:0.5rem;">B2C (Business to Consumer)</h4>
+                <p>Empresa vende directamente a consumidores finales. Ej: retailers online (Amazon), tiendas físicas (Walmart), servicios de suscripción (Netflix).</p>
+            </div>
+        </div>
+
+        <div class="caja-ejemplo">
+            <i class="fas fa-beer"></i> <strong>Ejemplo:</strong> Una reconocida marca de bebidas es B2B (vende a kioscos y supermercados). Un kiosco es B2C (vende al consumidor final).
+        </div>
+
+        <!-- 2.2 MODELOS DE NEGOCIO B2B Y B2C (ampliado) -->
+        <h2>2.2 Modelos de Negocio B2B y B2C</h2>
+
+        <h3>· Características del modelo B2B</h3>
+        <ul>
+            <li>Enfoque en relaciones a largo plazo.</li>
+            <li>Ciclo de ventas más largo y complejo.</li>
+            <li>Mayor volumen de ventas por transacción.</li>
+            <li>Proceso de compra con múltiples aprobaciones.</li>
+        </ul>
+
+        <h3>· Características del modelo B2C</h3>
+        <ul>
+            <li>Enfoque en necesidades del consumidor final.</li>
+            <li>Ciclo de ventas más corto y directo.</li>
+            <li>Menor volumen por transacción.</li>
+            <li>Marketing masivo dirigido a grandes audiencias.</li>
+        </ul>
+
+        <h3>· Tabla comparativa B2B vs B2C</h3>
+        <table>
+            <tr><th>Característica</th><th>B2B</th><th>B2C</th></tr>
+            <tr><td>Enfoque</td><td>Relaciones a largo plazo</td><td>Satisfacción inmediata</td></tr>
+            <tr><td>Ciclo de ventas</td><td>Largo y complejo</td><td>Corto y directo</td></tr>
+            <tr><td>Volumen</td><td>Alto por transacción</td><td>Bajo por transacción</td></tr>
+            <tr><td>Proceso de compra</td><td>Múltiples etapas</td><td>Decisión individual</td></tr>
+            <tr><td>Marketing</td><td>Personalizado</td><td>Masivo</td></tr>
+        </table>
+
+        <!-- 2.3 SELECCIÓN DE MEDIOS Y CANALES -->
+        <h2>2.3 Selección de Medios y Canales</h2>
+
+        <h3>· Pasos para seleccionar medios y canales</h3>
+        <ol>
+            <li><strong>Definir objetivos de campaña</strong> (metodología SMART).</li>
+            <li><strong>Establecer presupuesto</strong> disponible.</li>
+            <li><strong>Evaluar canales existentes</strong> (actividad en últimos 3 meses).</li>
+            <li><strong>Seleccionar canales digitales y/o tradicionales</strong> según audiencia.</li>
+        </ol>
+
+        <h3>· Canales digitales y sus métricas</h3>
+        <ul>
+            <li><strong>Redes sociales:</strong> seguidores, likes, comentarios, compartidos. Engagement = (interacciones / alcance) x 100.</li>
+            <li><strong>Email marketing:</strong> tasa de apertura, tasa de clics, conversión.</li>
+            <li><strong>Publicidad pagada:</strong> CPC (costo por clic), CPA (costo por adquisición), ROAS (retorno de inversión publicitaria).</li>
+        </ul>
+
+        <h3>· Medios tradicionales</h3>
+        <ul>
+            <li><strong>TV y radio:</strong> alcance, frecuencia, tasa de recuerdo.</li>
+            <li><strong>Prensa y revistas:</strong> tirada, distribución, tasa de respuesta.</li>
+        </ul>
+
+        <!-- 2.5 INTRODUCCIÓN AL PLAN DE MARKETING -->
+        <h2>2.5 Introducción al Plan de Marketing</h2>
+
+        <h3>· ¿Qué es un plan de marketing?</h3>
+        <p>Es una guía esencial para alcanzar los objetivos de negocio. La IA puede ayudar a automatizar tareas, analizar datos y brindar información valiosa.</p>
+
+        <h3>· Herramientas de IA para el plan de marketing</h3>
+        <ul>
+            <li><strong>Análisis de mercado:</strong> IBM Watson Analytics, Google Cloud Natural Language Processing.</li>
+            <li><strong>Identificar tendencias:</strong> Google Trends, SEMrush.</li>
+            <li><strong>Creación de contenido:</strong> ChatGPT, Persado.</li>
+            <li><strong>Distribución:</strong> HubSpot, Optimizely.</li>
+            <li><strong>Seguimiento:</strong> Google Analytics, Salesforce Einstein.</li>
+        </ul>
+
+        <div class="page-break"><span>Página 2 · Continuación</span></div>
+
+        <!-- 2.6 ANÁLISIS DE COMPETENCIA Y BENCHMARKING -->
+        <h2>2.6 Análisis de Competencia y Benchmarking</h2>
+
+        <h3>· Pasos para el análisis de competencia</h3>
+        <ol>
+            <li><strong>Identificar competidores:</strong> directos e indirectos.</li>
+            <li><strong>Recolectar información:</strong> productos, precios, canales de distribución.</li>
+            <li><strong>Analizar estrategia de marketing:</strong> campañas, presencia en redes, SEO.</li>
+        </ol>
+
+        <h3>· Herramientas útiles</h3>
+        <div class="grid-3">
+            <div class="destacado"><i class="fas fa-chart-line"></i> <strong>SEMrush</strong><br>Análisis SEO, palabras clave, backlinks.</div>
+            <div class="destacado"><i class="fas fa-trend-up"></i> <strong>Google Trends</strong><br>Tendencias de búsqueda y estacionalidad.</div>
+            <div class="destacado"><i class="fas fa-chart-bar"></i> <strong>SocialBlade</strong><br>Estadísticas de redes sociales.</div>
+        </div>
+
+        <h3>· Benchmarking</h3>
+        <p>Comparar procesos, productos y servicios con los líderes del mercado para identificar mejores prácticas. Pasos: seleccionar aspectos a comparar, identificar líderes, recolectar datos, implementar mejoras, monitorear.</p>
+
+        <!-- 2.7 DEFINICIÓN DE OBJETIVOS CON METODOLOGÍA S.M.A.R.T. -->
+        <h2>2.7 Definición de Objetivos con Metodología S.M.A.R.T.</h2>
+
+        <div class="grid-2">
+            <div class="destacado">
+                <strong>S</strong> · Específicos (Specific)<br>
+                <small>Ej: "Incrementar seguidores de Instagram en 1.000 en enero"</small>
+            </div>
+            <div class="destacado">
+                <strong>M</strong> · Medibles (Measurable)<br>
+                <small>Ej: "Aumentar ventas un 20% en el primer trimestre"</small>
+            </div>
+            <div class="destacado">
+                <strong>A</strong> · Alcanzables (Achievable)<br>
+                <small>Ej: "Conseguir 50 nuevos clientes mensuales"</small>
+            </div>
+            <div class="destacado">
+                <strong>R</strong> · Relevantes (Relevant)<br>
+                <small>Ej: "Aumentar participación de mercado 5%"</small>
+            </div>
+            <div class="destacado">
+                <strong>T</strong> · Acotados en el tiempo (Time-bound)<br>
+                <small>Ej: "Incrementar conversión 15% en 6 meses"</small>
+            </div>
+        </div>
+
+        <!-- 2.8 ESTRATEGIAS Y TÁCTICAS DE CONTENIDO -->
+        <h2>2.8 Estrategias y Tácticas de Contenido</h2>
+
+        <h3>· Estrategias de contenido</h3>
+        <ul>
+            <li>Definir objetivos, audiencia, tipos de contenido y calendario editorial.</li>
+        </ul>
+
+        <h3>· Tácticas de contenido</h3>
+        <ul>
+            <li>SEO, marketing en redes, influencers, email marketing, contenido interactivo.</li>
+        </ul>
+
+        <h3>· Contenido según el ciclo de vida (TOFU, MOFU, BOFU)</h3>
+        <div class="grid-3">
+            <div class="destacado">
+                <span class="badge">TOFU</span> Top of Funnel<br>
+                <small>Atraer: blogs educativos, infografías, videos.</small>
+            </div>
+            <div class="destacado">
+                <span class="badge">MOFU</span> Middle of Funnel<br>
+                <small>Convertir: ebooks, webinars, casos de estudio.</small>
+            </div>
+            <div class="destacado">
+                <span class="badge">BOFU</span> Bottom of Funnel<br>
+                <small>Vender: testimonios, demos, comparaciones.</small>
+            </div>
+        </div>
+
+        <!-- 2.9 MEDICIÓN DE RESULTADOS -->
+        <h2>2.9 Medición de Resultados</h2>
+        <p>"Lo que no se mide, no se puede mejorar". Medir la eficacia mediante KPIs y frecuencia de medición.</p>
+
+        <h3>· Ejemplos de KPIs</h3>
+        <ul>
+            <li>Nuevos seguidores en Instagram.</li>
+            <li>Ventas mensuales en e-commerce.</li>
+            <li>Visitas diarias al sitio web.</li>
+        </ul>
+
+        <!-- 2.10 ANALÍTICA DE DATOS Y ESTRATEGIA DE CONTENIDOS -->
+        <h2>2.10 Analítica de Datos y Estrategia de Contenidos</h2>
+
+        <h3>· Uso de analítica para medir rendimiento</h3>
+        <ul>
+            <li>Definir objetivos SMART.</li>
+            <li>Seleccionar KPIs.</li>
+            <li>Usar herramientas: Google Analytics, Facebook Insights.</li>
+            <li>Ajustar estrategias según datos.</li>
+        </ul>
+
+        <h3>· Estrategia de contenidos efectiva por sector</h3>
+        <div class="grid-3">
+            <div class="destacado">
+                <strong>Bienes raíces:</strong> decoración, tips para comprar/vender, hipotecas.
+            </div>
+            <div class="destacado">
+                <strong>Alimenticia:</strong> recetas, ingredientes, historia de alimentos.
+            </div>
+            <div class="destacado">
+                <strong>Financiero:</strong> consejos financieros, historias de éxito, ahorro.
+            </div>
+        </div>
+
+        <!-- 2.11 ACTIVIDAD PRÁCTICA: ANÁLISIS FODA -->
+        <h2>2.11 Actividad práctica: Análisis FODA</h2>
+
+        <div class="actividad-block">
+            <h3 style="display:flex; gap:10px;"><i class="fas fa-plane" style="color:#0d3852;"></i> Aerolínea Ejemplo</h3>
+            
+            <p><strong>Contexto:</strong> Una nueva aerolínea de bandera ofrece vuelos nacionales y pronto incorporará internacionales. Necesita completar el plan de marketing comenzando con un <strong>análisis FODA</strong>.</p>
+            
+            <p><strong>Consigna:</strong> Realizar un análisis FODA incluyendo fortalezas, oportunidades, debilidades y amenazas.</p>
+
+            <div class="foda-cuadrante">
+                <div class="foda-item fortalezas">
+                    <strong>FORTALEZAS</strong><br>
+                    <small>· Flota nueva<br>· Personal capacitado<br>· Alianzas estratégicas</small>
+                </div>
+                <div class="foda-item oportunidades">
+                    <strong>OPORTUNIDADES</strong><br>
+                    <small>· Turismo en crecimiento<br>· Rutas internacionales<br>· Alianzas con hoteles</small>
+                </div>
+                <div class="foda-item debilidades">
+                    <strong>DEBILIDADES</strong><br>
+                    <small>· Marca nueva<br>· Poca experiencia<br>· Flota limitada</small>
+                </div>
+                <div class="foda-item amenazas">
+                    <strong>AMENAZAS</strong><br>
+                    <small>· Competidores consolidados<br>· Combustible volátil<br>· Crisis económicas</small>
+                </div>
+            </div>
+
+            <p><i class="fas fa-pencil-alt"></i> Completar con ideas propias.</p>
+        </div>
+
+        <div class="footer-parte">
+            Fin de la Parte 2 · Briefing, estrategias y plan de marketing
+        </div>
+    </div>
+
+    <!-- ========== PARTE 3 ========== -->
+    <div id="parte3" class="parte">
+        <div class="page-break"><span>Comienza Parte 3</span></div>
+
+        <!-- 3.1 OPTIMIZACIÓN DE MEDIOS SOCIALES (SMO) -->
+        <h2>3.1 Optimización de Medios Sociales (SMO)</h2>
+
+        <h3>· Introducción a Social Media Marketing</h3>
+        <p>El <strong>Social Media Optimization (SMO)</strong> se refiere a la optimización de nuestros perfiles y contenidos en redes sociales para mejorar la visibilidad y el engagement. Básicamente, se trata de hacer que nuestra marca sea irresistible en plataformas como Instagram, Facebook y Twitter. El <strong>Social Media Marketing (SMM)</strong> utiliza las redes sociales como un canal principal de difusión para nuestras estrategias de marketing.</p>
+
+        <h3>· Concepto de SMO</h3>
+        <p>SMO es la sigla de <strong>Social Media Optimization</strong> (Optimización de los Medios Sociales). Este concepto se refiere a la utilización de las redes sociales como herramienta principal para alcanzar los resultados que una marca está buscando. El objetivo del SMO es posicionar la marca y brindarle una fuerte presencia online mediante el uso de técnicas específicas.</p>
+
+        <h3>· Objetivos del SMO</h3>
+        <ul>
+            <li>Aumentar la presencia en línea.</li>
+            <li>Mejorar la interacción con la audiencia.</li>
+            <li>Generar tráfico hacia los sitios web.</li>
+            <li>Incrementar la lealtad del cliente.</li>
+        </ul>
+
+        <h3>· Técnicas de SMO</h3>
+        <ul>
+            <li><strong>Creación de contenido de calidad:</strong> publicar contenido relevante, informativo y atractivo.</li>
+            <li><strong>Uso de palabras clave:</strong> incorporar keywords relevantes para mejorar visibilidad en buscadores.</li>
+            <li><strong>Interacción con la audiencia:</strong> responder comentarios, mensajes y menciones.</li>
+            <li><strong>Uso de etiquetas y hashtags:</strong> utilizar hashtags populares para ampliar alcance.</li>
+            <li><strong>Optimización del perfil:</strong> perfiles completos con información relevante y enlaces.</li>
+        </ul>
+
+        <h3>· Importancia de la interacción en redes sociales</h3>
+        <ul>
+            <li><strong>Generación de engagement:</strong> mayor lealtad y apoyo a la marca.</li>
+            <li><strong>Mejora del posicionamiento:</strong> las interacciones frecuentes mejoran el algoritmo.</li>
+            <li><strong>Retroalimentación:</strong> feedback directo de seguidores sobre productos y campañas.</li>
+        </ul>
+
+        <div class="caja-ejemplo">
+            <i class="fas fa-chart-line"></i> <strong>Estadísticas relevantes:</strong><br>
+            • En Instagram, el 80% de los usuarios sigue al menos a una marca.<br>
+            • Google ha adaptado su algoritmo para considerar el engagement como factor de clasificación.
+        </div>
+
+        <!-- 3.2 SOCIAL MEDIA MARKETING (SMM) -->
+        <h2>3.2 Social Media Marketing (SMM)</h2>
+
+        <h3>· Descripción de SMM</h3>
+        <p>El <strong>Social Media Marketing</strong> se refiere al uso de las redes sociales para promocionar productos, servicios o marcas y para conectar con una audiencia. Combina herramientas y técnicas para crear y gestionar la presencia de una marca en plataformas de redes sociales.</p>
+
+        <h3>· Herramientas del SMM</h3>
+        <ul>
+            <li><strong>Plataformas de gestión:</strong> Hootsuite, Buffer, Sprout Social (programar publicaciones, monitorear menciones).</li>
+            <li><strong>Análisis y reportes:</strong> Google Analytics, Facebook Insights, Twitter Analytics.</li>
+            <li><strong>Creación de contenido:</strong> Canva, Adobe Spark, Lumen5.</li>
+            <li><strong>Publicidad en redes:</strong> Facebook Ads, Instagram Ads, LinkedIn Ads.</li>
+        </ul>
+
+        <h3>· Técnicas del SMM</h3>
+        <ul>
+            <li>Contenido de valor que atraiga y retenga.</li>
+            <li>Engagement con la audiencia (comentarios, likes, shares).</li>
+            <li>Uso de hashtags relevantes.</li>
+            <li>Campañas publicitarias pagadas.</li>
+            <li>Colaboraciones con influencers.</li>
+            <li>Concursos y promociones.</li>
+        </ul>
+
+        <div class="page-break"><span>Página 3 · Continuación</span></div>
+
+        <h3>· Objetivos del SMM</h3>
+        <ul>
+            <li>Aumentar visibilidad de marca.</li>
+            <li>Generar tráfico al sitio web.</li>
+            <li>Fomentar engagement.</li>
+            <li>Generar leads.</li>
+            <li>Incrementar ventas.</li>
+            <li>Mejorar fidelización.</li>
+        </ul>
+
+        <h3>· Creación estratégica de un nuevo canal de comunicación digital</h3>
+        <ul>
+            <li><strong>Aumenta la conectividad:</strong> comunicación en tiempo real.</li>
+            <li><strong>Facilita el feedback:</strong> retroalimentación inmediata.</li>
+            <li><strong>Personaliza la comunicación:</strong> mensajes adaptados al usuario.</li>
+            <li><strong>Amplía el alcance:</strong> audiencia global.</li>
+        </ul>
+
+        <!-- 3.3 IMPORTANCIA DE LA COMUNICACIÓN DIGITAL -->
+        <h2>3.3 Importancia de la Comunicación Digital</h2>
+
+        <h3>· Para los usuarios</h3>
+        <ul>
+            <li><strong>Conectividad permanente:</strong> interacción con amigos, familia, acceso a información.</li>
+            <li><strong>Acceso a información:</strong> noticias, tendencias, desarrollos al instante.</li>
+            <li><strong>Interacción y participación:</strong> comunidades online, sentido de pertenencia.</li>
+            <li><strong>Compras online:</strong> comodidad, comparación de precios, opiniones.</li>
+        </ul>
+
+        <h3>· Para las empresas</h3>
+        <ul>
+            <li><strong>Visibilidad y reconocimiento de marca:</strong> presencia activa en plataformas digitales.</li>
+            <li><strong>Relación con consumidores:</strong> interacción directa, respuesta en tiempo real.</li>
+            <li><strong>Eficiencia en ventas:</strong> marketing digital segmentado y efectivo.</li>
+            <li><strong>Analítica y datos:</strong> información sobre comportamiento y preferencias.</li>
+            <li><strong>Costos efectivos:</strong> campañas más económicas que medios tradicionales.</li>
+        </ul>
+
+        <!-- 3.4 PODER DEL CONSUMIDOR DIGITAL -->
+        <h2>3.4 Poder del Consumidor Digital</h2>
+
+        <h3>· El poder de opinión del consumidor digital</h3>
+        <p>En la era digital, el consumidor ha adquirido un poder significativo gracias a la capacidad de expresar sus opiniones y experiencias a través de múltiples plataformas en línea. Las redes sociales, foros, blogs y sitios de reseñas permiten compartir opiniones de manera instantánea y masiva, influenciando la percepción y el éxito de las marcas.</p>
+
+        <h3>· Características del consumidor digital</h3>
+        <ul>
+            <li><strong>Crítico y exigente:</strong> mucha información y opciones disponibles.</li>
+            <li><strong>Generador de contenido:</strong> crea y comparte experiencias.</li>
+            <li><strong>Influyente:</strong> sus opiniones afectan decisiones de otros.</li>
+            <li><strong>Conectado:</strong> acceso a información en tiempo real.</li>
+        </ul>
+
+        <h3>· Influencia en el posicionamiento de marcas</h3>
+        <ul>
+            <li><strong>Comentarios y reseñas:</strong> afectan reputación (Google, Yelp, Amazon).</li>
+            <li><strong>Redes sociales:</strong> viralización de experiencias positivas o negativas.</li>
+            <li><strong>Feedback público:</strong> empresas pueden responder y solucionar visiblemente.</li>
+        </ul>
+
+        <h3>· Importancia de las experiencias positivas</h3>
+        <ul>
+            <li><strong>Fidelización:</strong> clientes satisfechos repiten y recomiendan.</li>
+            <li><strong>Publicidad positiva:</strong> gratuita y auténtica.</li>
+            <li><strong>Reducción de riesgo:</strong> críticas positivas mitigan comentarios negativos.</li>
+        </ul>
+
+        <!-- 3.5 ESTRATEGIA DE CONTENIDOS -->
+        <h2>3.5 Estrategia de Contenidos</h2>
+
+        <h3>· Pasos para diseñar una estrategia de contenidos eficaz</h3>
+        <ol>
+            <li><strong>Definir objetivos:</strong> visibilidad, leads, engagement, ventas.</li>
+            <li><strong>Conocer a la audiencia:</strong> encuestas, entrevistas, buyer personas.</li>
+            <li><strong>Auditoría de contenidos:</strong> revisar qué funcionó y qué no.</li>
+            <li><strong>Definir canales de distribución:</strong> blogs, redes, email.</li>
+            <li><strong>Crear calendario de contenidos:</strong> planificar publicaciones.</li>
+            <li><strong>Desarrollar contenido de calidad:</strong> informativo, atractivo, relevante.</li>
+            <li><strong>Promover el contenido:</strong> SEO, publicidad, influencers.</li>
+            <li><strong>Medir y analizar:</strong> tráfico, engagement, conversiones, ROI.</li>
+        </ol>
+
+        <!-- 3.6 APLICACIÓN DE IA AL MARKETING DE CONTENIDOS -->
+        <h2>3.6 Aplicación de la Inteligencia Artificial al Marketing de Contenidos</h2>
+
+        <h3>· Introducción a la IA</h3>
+        <p>La IA es la capacidad de las máquinas para realizar tareas que normalmente requerirían inteligencia humana, mediante algoritmos y machine learning. Herramientas como ChatGPT están revolucionando el marketing.</p>
+
+        <h4>Aplicaciones de IA al marketing de contenidos:</h4>
+        <ul>
+            <li><strong>Análisis de datos y métricas:</strong> Google Analytics, Adobe Analytics, Mixpanel, Netbase Quid.</li>
+            <li><strong>Publicidad programática:</strong> anuncios relacionados con comportamiento de navegación.</li>
+            <li><strong>Generación de contenidos:</strong> ChatGPT, Frase.io, Jasper.ai, Articoolo, Copy.ai, Notion, Rytr, Linguix.</li>
+            <li><strong>Análisis de comportamiento del consumidor:</strong> Evergage, Monetate, Affable.ai.</li>
+            <li><strong>Optimización de contenidos:</strong> Semrush, Ahrefs, Moz, MarketMuse, Acrolinx.</li>
+            <li><strong>Chatbots y reconocimiento automático:</strong> atención al cliente automatizada.</li>
+        </ul>
+
+        <!-- 3.7 CICLO DE EXPERIENCIA DEL USUARIO DIGITAL -->
+        <h2>3.7 Ciclo de Experiencia del Usuario Digital e Inbound Marketing</h2>
+
+        <h3>· Etapas del ciclo de experiencia del usuario digital</h3>
+        
+        <div class="grid-3">
+            <div class="destacado">
+                <span class="numerito">1</span> <strong>Descubrimiento</strong>
+                <p>El usuario detecta una necesidad. Captar atención con contenido que genere consciencia (blogs, infografías, videos). Estrategias: SEO, SEM.</p>
+            </div>
+            <div class="destacado">
+                <span class="numerito">2</span> <strong>Consideración</strong>
+                <p>El usuario busca soluciones. Contenido educativo: ebooks, webinars, casos de estudio. Estrategias: engagement, retargeting.</p>
+            </div>
+            <div class="destacado">
+                <span class="numerito">3</span> <strong>Decisión</strong>
+                <p>El usuario elige comprar. Facilitar conversión con testimonios, reseñas, ofertas, CTAs claros.</p>
+            </div>
+        </div>
+
+        <div class="destacado">
+            <p><i class="fas fa-lightbulb"></i> <strong>Resumen:</strong> Entender y abordar cada etapa del ciclo de experiencia del usuario es esencial para desarrollar una estrategia de marketing digital efectiva.</p>
+        </div>
+
+        <div class="footer-parte">
+            Fin de la Parte 3 · Redes sociales, contenido y experiencia de usuario
+        </div>
+    </div>
+
+    <!-- ========== PARTE 4 ========== -->
+    <div id="parte4" class="parte">
+        <div class="page-break"><span>Comienza Parte 4</span></div>
+
+        <!-- 4.1 DIFERENCIAS ENTRE FAN PAGE Y PERFIL PERSONAL -->
+        <h2>4.1 Diferencias entre Fan Page y Perfil Personal</h2>
+
+        <h3>· Cómo crear una Fan Page en Facebook</h3>
+        <p>Después de adquirir herramientas importantes para todo Community Manager, nos adentramos en el mundo de las redes sociales, comenzando con la creación de una Fan Page.</p>
+        
+        <div class="caja-ejemplo">
+            <i class="fas fa-facebook-square"></i> <strong>Tip:</strong> Anímate a crear tu propia Fan Page en Facebook y empezá a conectar con tu audiencia de manera efectiva. Publicá contenido de calidad y mantené comunicación constante con tus seguidores.
+        </div>
+
+        <!-- 4.2 CONTENIDO DE VALOR Y CONTENIDOS QUE NO DAN RESULTADO -->
+        <h2>4.2 Contenido de Valor y Contenidos que no dan Resultado</h2>
+
+        <h3>· Contenido efectivo en Facebook</h3>
+        
+        <h4>1. Experiencia del Usuario</h4>
+        <ul>
+            <li><strong>Hacé preguntas a tu comunidad:</strong> fomentar la participación directa.</li>
+            <li><strong>Invita a que compartan experiencias previas:</strong> pedir historias y experiencias.</li>
+            <li><strong>Llamar la atención del usuario:</strong> usar elementos creativos e imaginativos.</li>
+            <li><strong>Aprovechar la actualidad:</strong> publicar contenido relevante a eventos y temas actuales.</li>
+        </ul>
+
+        <h4>2. Humanización de la Marca</h4>
+        <ul>
+            <li>Mostrar al equipo (fotos y videos del equipo de trabajo).</li>
+            <li>Compartir experiencias de socios/empleados.</li>
+            <li>Usar emoticones para dar un toque más humano.</li>
+            <li>Mostrar quién está detrás de la marca.</li>
+        </ul>
+
+        <h4>3. Contenido Útil y Educativo</h4>
+        <ul>
+            <li>Manuales, guías y consejos.</li>
+            <li>Concursos y sorteos (sin abusar).</li>
+            <li>Webinars y audios/podcasts.</li>
+        </ul>
+
+        <h4>4. Contenido Visual</h4>
+        <ul>
+            <li>GIF animados.</li>
+            <li>Videos relevantes y de calidad.</li>
+            <li>Fotos de productos en exteriores (diferentes ambientes y luces).</li>
+        </ul>
+
+        <h4>5. Promociones y Ofertas</h4>
+        <ul>
+            <li>Promoción de combos o descuentos.</li>
+            <li>Destacar el local (fotos y videos para invitar a visitarlo).</li>
+        </ul>
+
+        <h3>· Contenidos que no dan resultados en Facebook</h3>
+        <ul>
+            <li><strong>Publicaciones sin estrategia:</strong> falta de objetivo claro, perjudica la reputación.</li>
+            <li><strong>Automatizar el mismo post para distintas plataformas:</strong> duplicidad molesta y poco personalizada.</li>
+            <li><strong>Hablar en exceso de la marca:</strong> autorreferencia excesiva genera desconfianza.</li>
+            <li><strong>Contenido visual de mala calidad:</strong> fotos pixeladas, videos poco nítidos.</li>
+            <li><strong>Copiar contenido:</strong> falta de originalidad reduce el valor percibido.</li>
+        </ul>
+
+        <h3>· Recomendaciones para crear contenido que genere interacción</h3>
+        <div class="grid-2">
+            <div class="destacado">
+                <strong>Interactividad</strong>
+                <ul>
+                    <li>Preguntar y responder</li>
+                    <li>Usar encuestas y cuestionarios</li>
+                </ul>
+            </div>
+            <div class="destacado">
+                <strong>Contenido relevante y actualizado</strong>
+                <ul>
+                    <li>Aprovechar eventos y noticias</li>
+                    <li>Mantener la página actualizada</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>· IA para analizar el contenido y las emociones de tu audiencia</h3>
+        <p>El <strong>análisis de sentimientos</strong> es una técnica de IA para determinar la actitud o emoción expresada en un texto (positiva, negativa o neutral).</p>
+
+        <h4>Herramientas de IA para análisis de emociones:</h4>
+        <div class="grid-3">
+            <div class="destacado">Aylien Text Analysis API</div>
+            <div class="destacado">Brandwatch</div>
+            <div class="destacado">Hootsuite Insights</div>
+            <div class="destacado">Microsoft Azure Text Analytics</div>
+            <div class="destacado">Amazon Comprehend</div>
+        </div>
+
+        <div class="page-break"><span>Página 4 · Continuación</span></div>
+
+        <!-- 4.3 EL ALGORITMO DE FACEBOOK -->
+        <h2>4.3 El Algoritmo de Facebook</h2>
+
+        <h3>· Cómo funciona el algoritmo</h3>
+        <ul>
+            <li><strong>Señales de interacción:</strong> "me gusta", comentarios, compartidos, tiempo de visualización.</li>
+            <li><strong>Puntuación de relevancia:</strong> basada en interacción pasada, tipo de contenido, popularidad.</li>
+            <li><strong>Predicciones del usuario:</strong> historial de interacción.</li>
+            <li><strong>Interés del usuario:</strong> ajusta contenido según intereses.</li>
+        </ul>
+
+        <h3>· Factores clave del algoritmo</h3>
+        <ul>
+            <li><strong>Interacciones significativas:</strong> prioriza comentarios largos y conversaciones.</li>
+            <li><strong>Relación del usuario:</strong> favorece amigos, familiares y páginas con interacción frecuente.</li>
+            <li><strong>Contenido de video y en vivo:</strong> reciben impulso adicional.</li>
+            <li><strong>Actualidad y relevancia:</strong> publicaciones actuales y relevantes.</li>
+        </ul>
+
+        <!-- 4.4 CALENDARIO DE PUBLICACIONES Y META BUSINESS SUITE -->
+        <h2>4.4 Calendario de Publicaciones y Meta Business Suite</h2>
+
+        <h3>· Calendario de publicaciones</h3>
+        <p>Un calendario de publicaciones es una herramienta esencial (generalmente Excel) que sirve como hoja de ruta para gestionar las publicaciones en redes sociales: <strong>qué, cuándo y cómo</strong>.</p>
+
+        <h4>Recomendaciones:</h4>
+        <ul>
+            <li><strong>Variedad de contenido:</strong> imágenes, videos, enlaces.</li>
+            <li><strong>Frecuencia regular:</strong> diaria, semanal, mensual.</li>
+            <li><strong>Programar días y horarios óptimos:</strong> según actividad de la audiencia.</li>
+            <li><strong>Contenido de valor:</strong> al menos 50% de interés para la audiencia.</li>
+            <li><strong>Usar herramientas de gestión:</strong> Skedsocial, Onlypult, Later, Planoly, Hootsuite, Creator Studio.</li>
+        </ul>
+
+        <h4>Ejemplo de calendario:</h4>
+        <table>
+            <tr><th>Fecha</th><th>Tipo</th><th>Descripción</th><th>Formato</th></tr>
+            <tr><td>01/07</td><td>Informativa</td><td>Blog nuevas tendencias</td><td>Artículo</td></tr>
+            <tr><td>03/07</td><td>Visual</td><td>Infografía estadísticas</td><td>Imagen</td></tr>
+            <tr><td>05/07</td><td>Promoción</td><td>Descuento especial</td><td>Video</td></tr>
+        </table>
+
+        <h3>· Meta Business Suite</h3>
+        <p>Herramienta de Facebook para crear, programar y gestionar contenido.</p>
+
+        <h4>Funciones principales:</h4>
+        <ul>
+            <li>Crear y programar publicaciones en fechas y horas específicas.</li>
+            <li>Organizar videos en listas de reproducción.</li>
+            <li>Promoción de publicaciones para aumentar alcance.</li>
+            <li>Administrar varias páginas desde un lugar.</li>
+            <li>Gestionar mensajes y comentarios (Inboxes).</li>
+            <li>Monetizar con pausas publicitarias en videos.</li>
+            <li>Medir resultados con Insights de página.</li>
+        </ul>
+
+        <!-- 4.5 TIPOS DE CUENTAS EN INSTAGRAM -->
+        <h2>4.5 Tipos de Cuentas en Instagram</h2>
+
+        <h3>· Uso efectivo de hashtags en Instagram</h3>
+        <p>Los hashtags aumentan la visibilidad y el alcance. Funcionan como etiquetas que agrupan contenido relacionado.</p>
+
+        <h4>Recomendaciones:</h4>
+        <ul>
+            <li><strong>Cantidad ideal:</strong> 5 a 10 hashtags por publicación (evitar spam).</li>
+            <li><strong>Ubicación:</strong> en pie de foto o primer comentario (apariencia limpia).</li>
+            <li><strong>Específicos y relevantes:</strong> ej: #MarketingDigital, #SEO.</li>
+            <li><strong>Evitar genéricos:</strong> #love, #instagood (demasiado amplios).</li>
+            <li><strong>Crear hashtags propios</strong> para la marca.</li>
+        </ul>
+
+        <h4>Herramientas para identificar hashtags:</h4>
+        <div class="grid-2">
+            <div class="destacado">Hashtagify</div>
+            <div class="destacado">Postcron</div>
+            <div class="destacado">Keyhole</div>
+            <div class="destacado">Metricool</div>
+        </div>
+
+        <!-- 4.6 EL ALGORITMO DE INSTAGRAM -->
+        <h2>4.6 El Algoritmo de Instagram</h2>
+
+        <h3>· Algoritmo de EdgeRank (feed)</h3>
+        <ul>
+            <li><strong>Interés:</strong> predice cuánto interesará una publicación.</li>
+            <li><strong>Presencia:</strong> publicaciones recientes tienen prioridad.</li>
+            <li><strong>Relación:</strong> personas con más interacción.</li>
+            <li><strong>Frecuencia:</strong> usuarios que abren menos ven lo más relevante.</li>
+            <li><strong>Seguimiento:</strong> cantidad de cuentas seguidas.</li>
+        </ul>
+
+        <h3>· Algoritmo de búsqueda de hashtags</h3>
+        <ul>
+            <li>Interacciones iniciales (poco después de publicar).</li>
+            <li>Relevancia del contenido para el hashtag.</li>
+            <li>Calidad del contenido (imágenes, descripciones).</li>
+        </ul>
+
+        <!-- 4.7 INSTAGRAM: 10 ESTRATEGIAS DE CONTENIDO -->
+        <h2>4.7 Instagram: 10 estrategias de contenido</h2>
+
+        <div class="grid-2">
+            <div class="estrategia-item">
+                <span class="numerito">1</span> <strong>Definir un look visual</strong>
+                <p>Estilo consistente, no olvidarlo jamás.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">2</span> <strong>Hacer algo diferente</strong>
+                <p>Destacarse en la multitud.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">3</span> <strong>Fotos de calidad</strong>
+                <p>Buena iluminación, enfoque y nitidez.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">4</span> <strong>Aprovechar todos los recursos</strong>
+                <p>Probar y quedarse con lo que funciona.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">5</span> <strong>Diversificar formatos y horarios</strong>
+                <p>La audiencia dirá cuál es el indicado.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">6</span> <strong>Tips instructivos, creativos y auténticos</strong>
+                <p>Ayudar a la comunidad con alternativas que solucionen inquietudes.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">7</span> <strong>Invitados especiales</strong>
+                <p>Mostrar expertos, lives, videos interactivos.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">8</span> <strong>Juegos</strong>
+                <p>Motivan participación y conocer seguidores.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">9</span> <strong>Realizar concursos y sorteos</strong>
+                <p>Para crecer audiencia: seguir, like, comentar, usar hashtag.</p>
+            </div>
+            <div class="estrategia-item">
+                <span class="numerito">10</span> <strong>Fraccionar un SPOT de video en stories</strong>
+                <p>Storytelling en 5-15 segundos, múltiples tomas.</p>
+            </div>
+        </div>
+
+        <h3>· Estrategias adicionales</h3>
+        <div class="grid-2">
+            <div class="destacado">
+                <strong>Publicaciones emotivas</strong>
+                <p>Instagram es emocional: imágenes y videos con contenido emocional y divertido.</p>
+            </div>
+            <div class="destacado">
+                <strong>Publicar motivación o frases</strong>
+                <p>Componente emocional, invitar a comentar.</p>
+            </div>
+            <div class="destacado">
+                <strong>Mostrar el lado humano</strong>
+                <p>Equipo en acción, humanizar la empresa.</p>
+            </div>
+            <div class="destacado">
+                <strong>Usar pie de foto - copy</strong>
+                <p>Incluir preguntas, párrafos cortos, hashtags, emoticones.</p>
+            </div>
+        </div>
+
+        <!-- CIERRE DEL MANUAL -->
+        <hr>
+        <div style="background:#edf2f9; border-radius:24px; padding:1.5rem; text-align:center; margin:2rem 0;">
+            <i class="fas fa-check-circle" style="color:#1f3a4b; font-size:2rem;"></i>
+            <p style="font-size:1.5rem; font-weight:600;">Manual completo</p>
+            <p style="color:#2e4c6b;">4 partes · Fundamentos de Community Manager</p>
+        </div>
+
+        <div class="footer-parte">
+            Manual de Community Manager · Material de estudio · Libre para adaptar
+        </div>
+    </div>
+</div>
+
+<script>
+    // Resaltar el link activo en la navegación al hacer scroll
+    const sections = document.querySelectorAll('.parte');
+    const navLinks = document.querySelectorAll('.nav-partes a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('activo');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('activo');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
